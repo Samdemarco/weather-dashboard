@@ -9,8 +9,8 @@ function citySearch() {
 
   event.preventDefault();
   city = document.getElementById('searchCity').value;
-  queryURLcurrentWeather = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
-  queryURLforecastWeather = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=" + APIKey;
+  queryURLcurrentWeather = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+  queryURLforecastWeather = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=" + APIKey;
 
 
   //CHECK TO MAKE SURE THAT A) USER ENTERED A "REAL" CITY OR IF IT ALREADY EXISTS IN THEIR LIST OF PREVIOUSLY SEARCHED CITIES 
@@ -60,8 +60,8 @@ function saveCity() {
     city = btn.id;
     event.preventDefault();
     cityExists = true;
-    queryURLforecastWeather = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=" + APIKey;
-    queryURLcurrentWeather = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+    queryURLforecastWeather = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=" + APIKey;
+    queryURLcurrentWeather = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
     getCurrentWeather();
     getForecastWeather();
 
